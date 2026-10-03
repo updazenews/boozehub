@@ -1,0 +1,3 @@
+# Compliance controls
+
+This product provides configurable controls and does not itself determine legal compliance. Province-specific rules in `province_compliance_rules` are reviewed and configured by authorised legal/compliance staff. Customer purchase requires a verified age status; delivery requires a driver-recorded outcome without retaining a document image. A store cannot receive new orders unless approved and its licence is verified and current. Scheduled jobs issue expiry warnings at 90, 60, 30 and 7 days, then suspend ordering after expiry. Responsible-drinking and policy links must be presented in customer journeys.
