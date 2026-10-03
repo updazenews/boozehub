@@ -1,0 +1,18 @@
+{
+  "name": "boozehub",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*", "services/*"],
+  "scripts": {
+    "dev": "tsx services/api/src/server.ts",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/**/*.test.ts",
+    "lint": "eslint .",
+    "db:migrate": "psql \"$DATABASE_URL\" -f packages/database/schema.sql",
+    "db:seed": "tsx packages/database/src/seed.ts"
+  },
+  "devDependencies": {"@types/node":"^22.10.2","eslint":"^9.16.0","typescript":"^5.7.2","tsx":"^4.19.2","typescript-eslint":"^8.18.0"},
+  "dependencies": {"fastify":"^5.2.0","pg":"^8.13.1","zod":"^3.24.1"}
+}

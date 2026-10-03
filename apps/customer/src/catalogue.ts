@@ -1,0 +1,2 @@
+export interface NearbyStore { id: string; tradingName: string; distanceKm: number; deliveryFeeCents: number; etaMinutes: [number, number]; }
+export async function nearbyStores(latitude:number, longitude:number): Promise<NearbyStore[]> { const response=await fetch(`/api/stores/nearby?lat=${latitude}&lng=${longitude}`); if(!response.ok) throw new Error('Unable to load nearby eligible stores.'); return response.json() as Promise<NearbyStore[]>; }
